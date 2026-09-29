@@ -1,119 +1,115 @@
-# Week 14A · Next.js RAG starter
+# ChatBIR
 
-A streaming chat app on top of your knowledge base, built with [Next.js 15](https://nextjs.org/), the [Vercel AI SDK](https://sdk.vercel.ai/), and [Upstash Vector](https://upstash.com/docs/vector). This is the working solution for Section 4 of Week 14A.
+Your BIR-tual Assistant for BIR processes and requirements. A streaming chat app over BIR taxpayer guides, built with [Next.js 15](https://nextjs.org/), the [Vercel AI SDK](https://sdk.vercel.ai/), and [Upstash Vector](https://upstash.com/docs/vector).
+
+ChatBIR greets the user, answers in Markdown, and keeps retrieved passages under a collapsed **Sources** control. A disclaimer under the message box asks the user to confirm each answer.
 
 ## What's here
 
 ```
-14A-nextjs-rag/
+rag-chatbot/
 ├── app/
 │   ├── globals.css
-│   ├── layout.tsx
-│   ├── page.tsx                          # FINAL UI — useChat + sources
-│   └── api/chat/route.ts                 # FINAL handler — RAG-as-tool-call
+│   ├── layout.tsx                        # Geist, page title
+│   ├── page.tsx                          # ChatBIR UI — useChat, Markdown, sources
+│   └── api/chat/route.ts                 # RAG-as-tool-call handler
 ├── lib/
-│   └── seed.ts                           # Embeds data/sample.pdf into Upstash
-├── data/
-│   └── sample.pdf                        # Synthetic Acme Widget Spec
-├── steps/                                # Reference snapshots per workshop step
-│   ├── step2-plain-chat/
-│   │   ├── page.tsx                      # Step 2: useChat client component
-│   │   └── route.ts                      # Step 2: vanilla streamText handler
-│   ├── step4-rag-as-tool/
-│   │   └── route.ts                      # Step 4: route handler with the tool
-│   └── step5-sources/
-│       └── page.tsx                      # Step 5: page with <details> sources
+│   └── seed.ts                           # Embeds every PDF in data/
+├── data/                                 # BIR guides (PDFs only are seeded)
+├── public/
+│   └── chatbir-logo.jpg
+├── steps/                                # Workshop snapshots (not the live UI)
 ├── package.json
-├── tsconfig.json
-├── next.config.mjs
-├── postcss.config.mjs
-├── tailwind.config.ts
 ├── .env.example
-├── .gitignore
 └── README.md
 ```
 
+`data/` currently holds:
 
+- `01_Citizens_Charter_2026.pdf`
+- `02_ORUS_User_Guide_2024.pdf`
+- `03_Books_of_Accounts_ORUS_RMC_04_2026.pdf`
+- `04_Invoicing_RMC_77_2024.pdf`
+- `05_Online_Sellers_Taxpayer_Guide.pdf`
+- `06_eBIRForms_Job_Aid.pdf`
+- `07_COR_eCOR_Registration_Seal_RMC_38_2026.pdf`
+- `08_Taxpayer_Portal_RMC_53_2026.pdf`
+- `09_Books_of_Accounts_CDR_2024.pdf`
 
-## Setup (5 minutes)
+## Setup
 
 ```bash
-# 1. install
 npm install
 
-# 2. environment
+# macOS / Linux
 cp .env.example .env.local
-# edit .env.local and paste your real OPENAI_API_KEY,
-# UPSTASH_VECTOR_REST_URL, UPSTASH_VECTOR_REST_TOKEN
+# Windows
+copy .env.example .env.local
+```
 
-# 3. seed the vector index (one-time, or whenever data/sample.pdf changes)
+Edit `.env.local` and set `OPENAI_API_KEY`, `UPSTASH_VECTOR_REST_URL`, and `UPSTASH_VECTOR_REST_TOKEN`.
+
+Seed the index once, and again whenever a PDF in `data/` is added, replaced, or removed:
+
+```bash
 npm run seed
 ```
 
-The seed script reads `data/sample.pdf`, chunks it, embeds each chunk with `text-embedding-3-small`, and upserts to your Upstash Vector index. Re-running it overwrites the same ids, so it's idempotent.
+The seed script reads every `.pdf` file directly in `data/`. It chunks each file, embeds the chunks with `text-embedding-3-small` in batches under OpenAI's per-request token limit, and upserts them to Upstash Vector. Chunk ids are `filename#index`, so re-running the seed overwrites chunks for the same file. Vectors for a PDF you delete from `data/` stay in the index until you remove them in Upstash.
 
-## Run the final app
+## Run
 
 ```bash
 npm run dev
 # open http://localhost:3000
 ```
 
-Try asking:
+The first message is ChatBIR's greeting. Try asking:
 
-- *"What auth methods does the API support?"*
-- *"What happens when I exceed the rate limit?"*
-- *"Compare OAuth2 and API key authentication."*
+- *"What documents do I need to apply for a TIN?"*
+- *"When is the filing of ITR?"*
+- *"How do I register through ORUS?"*
 
-You should see tokens stream into the assistant bubble, then a **Sources (N)** disclosure beneath it. Expanding it shows page numbers, similarity scores, and the chunk text the model retrieved.
+Tokens stream into the assistant bubble as Markdown. The list follows the newest reply. **Sources** stays collapsed until you open it; each hit shows the PDF name, page, similarity score, and chunk text.
 
-## Walk through the steps
+## Workshop snapshots
 
-The `/steps` folder contains reference snapshots. To try them, copy each file over the matching path in `app/`:
+The `/steps` folder is the original Week 14A walkthrough. Copying those files over `app/page.tsx` or `app/api/chat/route.ts` replaces the ChatBIR UI and handler.
 
+| Step | Files to copy | What it shows |
+| ---- | ------------- | ------------- |
+| 2 | `steps/step2-plain-chat/page.tsx` → `app/page.tsx` | useChat against plain streamText |
+|   | `steps/step2-plain-chat/route.ts` → `app/api/chat/route.ts` | Streaming before retrieval |
+| 4 | `steps/step4-rag-as-tool/route.ts` → `app/api/chat/route.ts` | The model decides when to retrieve |
+| 5 | `steps/step5-sources/page.tsx` → `app/page.tsx` | Sources under each answer |
 
-| Step | Files to copy                                                | What it shows                              |
-| ---- | ------------------------------------------------------------ | ------------------------------------------ |
-| 2    | `steps/step2-plain-chat/page.tsx` → `app/page.tsx`           | useChat working against vanilla streamText |
-|      | `steps/step2-plain-chat/route.ts` → `app/api/chat/route.ts`  | (no RAG yet — verify streaming first)      |
-| 4    | `steps/step4-rag-as-tool/route.ts` → `app/api/chat/route.ts` | The model decides when to call retrieval   |
-| 5    | `steps/step5-sources/page.tsx` → `app/page.tsx`              | Sources rendered below answers             |
+## Add or replace documents
 
-
-After Step 5, the snapshots and the final `app/page.tsx` + `app/api/chat/route.ts` are the same shape — the final versions add a small system prompt and some chrome (a header, slightly nicer styling, status / error rendering).
-
-## Use your own corpus
-
-1. Replace `data/sample.pdf` with your own PDF.
-2. Re-run `npm run seed`.
-3. Restart `npm run dev`.
-
-For multi-PDF, multi-version, or permission-aware retrieval see Week 14B Section 4.
+1. Put `.pdf` files in `data/`. Other files in that folder are ignored.
+2. Run `npm run seed`.
+3. Restart `npm run dev` if it is already running.
 
 ## Deploy to Vercel
 
 ```bash
-npm i -g vercel  # if you don't have it
-vercel           # first run: log in, link the project
-vercel link
+npm i -g vercel
+vercel
 vercel env add OPENAI_API_KEY
 vercel env add UPSTASH_VECTOR_REST_URL
 vercel env add UPSTASH_VECTOR_REST_TOKEN
 vercel --prod
 ```
 
-You'll get a public URL like `https://rag-ui-xxx.vercel.app`. The seed is local — you only need to seed once per index, regardless of where the chat app is hosted.
+Seed locally once per index. The hosted app only needs the environment variables.
 
 ## Common errors
 
-
-| Symptom                                            | Fix                                                                |
-| -------------------------------------------------- | ------------------------------------------------------------------ |
-| `Error: missing UPSTASH_VECTOR_REST_URL`           | Run `npm run seed` after setting `.env.local`. Verify in Upstash.  |
-| Page renders but submitting hangs                  | Route handler missing `toDataStreamResponse()`. Check `route.ts`.  |
-| Empty / very short answer after a tool call        | `maxSteps` not set or set to 1. Set `maxSteps: 3` on `streamText`. |
-| `Cannot use useChat in a Server Component`         | Forgot `'use client'` at the top of `page.tsx`.                    |
-| Build error: `Type '...' is not assignable to ...` | Run `npx tsc --noEmit` to see the full type error.                 |
-| `vercel --prod` build fails on missing env vars    | `vercel env add ...` and pick **Production** when prompted.        |
-
-
+| Symptom | Fix |
+| ------- | --- |
+| `Missing UPSTASH_VECTOR_REST_URL / UPSTASH_VECTOR_REST_TOKEN` | Set them in `.env.local`, then run `npm run seed`. |
+| `No PDF files found in .../data` | Add at least one `.pdf` directly under `data/`. |
+| `Requested … tokens, max 300000 tokens per request` | The seed batches embeddings. Pull the latest `lib/seed.ts` if you still see this. |
+| Page renders but submitting hangs | The route must return `toDataStreamResponse()`. |
+| Empty or very short answer after a tool call | Set `maxSteps: 3` on `streamText`. |
+| `Cannot use useChat in a Server Component` | Keep `'use client'` at the top of `page.tsx`. |
+| `vercel --prod` fails on missing env vars | Run `vercel env add` and choose **Production**. |
