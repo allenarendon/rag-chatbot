@@ -15,7 +15,7 @@ type ToolInvocation = {
 
 type ChatMessage = {
   id: string;
-  role: string;
+  role: 'assistant' | 'user' | 'system' | 'data';
   content: string;
   toolInvocations?: ToolInvocation[];
   parts?: Array<{ type: string; toolInvocation?: ToolInvocation }>;
@@ -64,9 +64,9 @@ function AssistantMessage({ content }: { content: string }) {
   );
 }
 
-const greeting: ChatMessage = {
+const greeting = {
   id: 'greeting',
-  role: 'assistant',
+  role: 'assistant' as const,
   content: `Hello. I'm **ChatBIR**, your BIR-tual Assistant for BIR processes and requirements.
 
 I can help you look up:
