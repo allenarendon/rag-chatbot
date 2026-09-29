@@ -3,4 +3,5 @@
 @tailwind utilities;
 
 html, body { height: 100%; }
-body { background: #f8fafc; color: #0f172a; }
+html { font-size: 14px; }
+body { background: #f4f8fb; color: #1a1a1a; }

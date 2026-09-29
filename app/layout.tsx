@@ -1,15 +1,21 @@
 import type { Metadata } from 'next';
+import { Geist } from 'next/font/google';
 import './globals.css';
 
+const geist = Geist({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+});
+
 export const metadata: Metadata = {
-  title: 'Acme Spec Bot',
-  description: 'Ask questions about the Acme Widget API specification.',
+  title: 'ChatBIR',
+  description: 'Your BIR-tual Assistant for BIR Processess and Requirements',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={geist.className}>{children}</body>
     </html>
   );
 }

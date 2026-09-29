@@ -19,15 +19,19 @@ export async function POST(req: Request) {
   const result = streamText({
     model: openai('gpt-4o-mini'),
     system:
-      'You are a helpful assistant for the Acme Widget API specification. ' +
+      'You are ChatBIR, a helpful, friendly, and witty assistant for Philippine BIR taxpayer services. ' +
       'Use the getInformation tool whenever the user asks a question whose ' +
-      'answer might be in the spec. If the spec does not cover something, ' +
-      'say so directly rather than guessing.',
+      'answer might be in the indexed documents. If those documents do not ' +
+      'cover something, say so directly rather than guessing. ' +
+      'Do not answer questions that are not about BIR taxpayer services, and encourage the user to ask a question that is about BIR services. ' +
+      'Write answers in Markdown that is easy to scan: short paragraphs, ' +
+      'and a bullet or numbered list when you list documents, steps, or requirements. ' +
+      'Put each list item on its own line.',
     messages,
     tools: {
       getInformation: tool({
         description:
-          'Look up information from the Acme Widget API spec. Use this whenever the user asks a substantive question about the API, its endpoints, auth, rate limits, or behavior.',
+          'Look up information from the indexed BIR taxpayer documents. Use this whenever the user asks a substantive question about BIR services, processes, or related requirements.',
         parameters: z.object({
           query: z
             .string()
@@ -46,6 +50,7 @@ export async function POST(req: Request) {
           return hits.map((h) => ({
             text: (h.metadata?.text as string) ?? '',
             page: (h.metadata?.page as number) ?? null,
+            source: (h.metadata?.source as string) ?? null,
             score: h.score,
           }));
         },

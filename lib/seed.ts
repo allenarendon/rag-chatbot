@@ -1,11 +1,11 @@
 /**
- * Seed Upstash Vector with chunks from data/sample.pdf.
+ * Seed Upstash Vector with chunks from every PDF in data/.
  *
  * Run once before starting the chat:
  *   npm run seed
  *
- * Re-run any time you replace data/sample.pdf with a different document.
- * Existing chunks are overwritten by id (we use deterministic ids).
+ * Re-run any time you add, replace, or remove a PDF in data/.
+ * Existing chunks are overwritten by id (filename + chunk index).
  */
 import { config as loadEnv } from 'dotenv';
 import fs from 'node:fs/promises';
@@ -19,18 +19,21 @@ import { openai } from '@ai-sdk/openai';
 // pdf-parse uses CommonJS; default-import the parser fn
 import pdfParse from 'pdf-parse';
 
-const PDF_PATH = path.join(process.cwd(), 'data', 'sample.pdf');
+const DATA_DIR = path.join(process.cwd(), 'data');
 const CHUNK_SIZE = 800;
 const CHUNK_OVERLAP = 100;
+// Stay under OpenAI's 300k-token cap per embeddings request.
+const EMBED_TOKEN_BUDGET = 200_000;
+const UPSERT_BATCH = 100;
 
-type Chunk = { text: string; page: number };
+type Chunk = { text: string; page: number; source: string; index: number };
 
 /**
  * Naive but adequate chunker: split text into ~800-char windows with 100-char
  * overlap, attempting to break on sentence boundaries when possible.
  */
-function chunkText(text: string, page: number): Chunk[] {
-  const out: Chunk[] = [];
+function chunkText(text: string, page: number): Array<Pick<Chunk, 'text' | 'page'>> {
+  const out: Array<Pick<Chunk, 'text' | 'page'>> = [];
   let i = 0;
   while (i < text.length) {
     let end = Math.min(text.length, i + CHUNK_SIZE);
@@ -48,18 +51,49 @@ function chunkText(text: string, page: number): Chunk[] {
   return out;
 }
 
+function estimateTokens(text: string): number {
+  return Math.ceil(text.length / 4);
+}
+
+function batchChunks(chunks: Chunk[]): Chunk[][] {
+  const batches: Chunk[][] = [];
+  let current: Chunk[] = [];
+  let tokens = 0;
+  for (const chunk of chunks) {
+    const chunkTokens = estimateTokens(chunk.text);
+    if (current.length > 0 && tokens + chunkTokens > EMBED_TOKEN_BUDGET) {
+      batches.push(current);
+      current = [];
+      tokens = 0;
+    }
+    current.push(chunk);
+    tokens += chunkTokens;
+  }
+  if (current.length > 0) batches.push(current);
+  return batches;
+}
+
+async function listPdfFiles(dir: string): Promise<string[]> {
+  const entries = await fs.readdir(dir, { withFileTypes: true });
+  return entries
+    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.pdf'))
+    .map((entry) => path.join(dir, entry.name))
+    .sort((a, b) => path.basename(a).localeCompare(path.basename(b)));
+}
+
 async function loadAndChunkPdf(filePath: string): Promise<Chunk[]> {
+  const source = path.basename(filePath);
   const buf = await fs.readFile(filePath);
   const parsed = await pdfParse(buf);
   // pdf-parse returns the whole document as one string. We approximate
   // page numbers by splitting on form-feed (which pdf-parse inserts between pages).
   const pages = parsed.text.split('\f');
-  const chunks: Chunk[] = [];
+  const chunks: Array<Pick<Chunk, 'text' | 'page'>> = [];
   pages.forEach((pageText, pageIdx) => {
     if (pageText.trim().length === 0) return;
     chunks.push(...chunkText(pageText.trim(), pageIdx + 1));
   });
-  return chunks;
+  return chunks.map((chunk, index) => ({ ...chunk, source, index }));
 }
 
 async function main() {
@@ -72,28 +106,44 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`Loading and chunking ${PDF_PATH}…`);
-  const chunks = await loadAndChunkPdf(PDF_PATH);
-  console.log(`  produced ${chunks.length} chunks across ${new Set(chunks.map(c => c.page)).size} page(s)`);
+  const pdfPaths = await listPdfFiles(DATA_DIR);
+  if (pdfPaths.length === 0) {
+    console.error(`No PDF files found in ${DATA_DIR}`);
+    process.exit(1);
+  }
 
-  console.log('Embedding…');
-  const { embeddings } = await embedMany({
-    model: openai.embedding('text-embedding-3-small'),
-    values: chunks.map((c) => c.text),
-  });
+  const chunks: Chunk[] = [];
+  for (const pdfPath of pdfPaths) {
+    console.log(`Loading and chunking ${pdfPath}…`);
+    const fileChunks = await loadAndChunkPdf(pdfPath);
+    console.log(`  ${path.basename(pdfPath)}: ${fileChunks.length} chunks`);
+    chunks.push(...fileChunks);
+  }
+  if (chunks.length === 0) {
+    console.error('PDFs were found, but none produced text chunks.');
+    process.exit(1);
+  }
+  console.log(`  produced ${chunks.length} chunks from ${pdfPaths.length} PDF(s)`);
 
   const index = new Index();
-  const records = chunks.map((c, i) => ({
-    id: `chunk_${i}`,
-    vector: embeddings[i],
-    metadata: { text: c.text, page: c.page },
-  }));
-
-  console.log(`Upserting ${records.length} chunks to Upstash Vector…`);
-  // Upstash supports up to 1000 vectors per upsert; chunk if needed.
-  const BATCH = 100;
-  for (let i = 0; i < records.length; i += BATCH) {
-    await index.upsert(records.slice(i, i + BATCH));
+  const batches = batchChunks(chunks);
+  console.log(`Embedding ${chunks.length} chunks in ${batches.length} batch(es)…`);
+  for (let b = 0; b < batches.length; b++) {
+    const batch = batches[b];
+    console.log(`Embedding batch ${b + 1}/${batches.length} (${batch.length} chunks)…`);
+    const { embeddings } = await embedMany({
+      model: openai.embedding('text-embedding-3-small'),
+      values: batch.map((c) => c.text),
+    });
+    const records = batch.map((c, i) => ({
+      id: `${c.source}#${c.index}`,
+      vector: embeddings[i],
+      metadata: { text: c.text, page: c.page, source: c.source },
+    }));
+    console.log(`Upserting batch ${b + 1}/${batches.length}…`);
+    for (let i = 0; i < records.length; i += UPSERT_BATCH) {
+      await index.upsert(records.slice(i, i + UPSERT_BATCH));
+    }
   }
   console.log('✅ Done. Run `npm run dev` and chat at http://localhost:3000');
 }
