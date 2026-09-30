@@ -9,7 +9,7 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   title: 'ChatBIR',
-  description: 'Your BIR-tual Assistant for BIR Processess and Requirements',
+  description: 'Your BIR-tual Assistant for BIR Processes and Requirements',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

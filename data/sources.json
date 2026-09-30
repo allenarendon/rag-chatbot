@@ -1,0 +1,777 @@
+{
+  "01_Citizens_Charter_2026.pdf": {
+    "title": "BIR Citizen's Charter 2026, 1st Edition",
+    "documentType": "Citizen's Charter",
+    "reference": "Citizen's Charter 2026, 1st Edition",
+    "issued": "2026",
+    "searchable": true,
+    "summary": "Service standards for BIR external and internal services. Each external service lists the office or division, classification, who may avail, where to avail, operating hours, checklist of requirements, client steps, fees, and processing time. The charter also states the BIR mandate under Section 2 of the National Internal Revenue Code of 1997, its mission, Aspiration 2028, and the PLEDGE service pledge. Use this document for walk-in and online RDO procedures, documentary requirements, fees, and processing time.",
+    "topics": [
+      "Citizen's Charter service standards",
+      "Revenue District Office external services",
+      "TIN registration",
+      "new business registration",
+      "Authority to Print",
+      "books of accounts",
+      "ONETT computation sheet",
+      "eCAR",
+      "business closure and tax clearance",
+      "fees and processing time"
+    ],
+    "sections": [
+      {
+        "heading": "Revenue District Office – External Services",
+        "items": [
+          "Approval of application for TIN of a local employee, online through ORUS",
+          "Application for TIN of a local employee, manual walk-in processing",
+          "Application for TIN of a local employee, bulk of six or more applications, manual walk-in",
+          "Application for TIN of an Executive Order No. 98 or one-time transaction taxpayer, manual walk-in",
+          "Application for TIN of an Executive Order No. 98 or one-time transaction taxpayer, online through ORUS",
+          "TIN and registration of an individual new business registrant, head office only, including facilities, together with Authority to Print, online through ORUS",
+          "TIN and registration of an individual new business registrant, head office only, including facilities, together with Authority to Print, manual walk-in",
+          "TIN and registration of an individual new business registrant, head office only, including facilities, together with Authority to Print, bulk of six or more, manual walk-in",
+          "TIN and registration of a non-individual new business registrant, head office only, including facilities, together with Authority to Print, online through ORUS",
+          "TIN and registration of a non-individual new business registrant, head office only, including facilities, together with Authority to Print, manual walk-in",
+          "TIN and registration of a non-individual new business registrant, head office only, including facilities, together with Authority to Print, bulk of six or more, manual walk-in",
+          "Online application for registration of a nonresident foreign corporation in general",
+          "Registration of branches, individual or non-individual",
+          "Registration of branches, individual or non-individual, bulk of six or more",
+          "Application for Authority to Print invoices",
+          "Application for Authority to Print invoices, bulk of six or more",
+          "Registration of books of accounts",
+          "Registration of books of accounts, bulk of six or more",
+          "Certification of Certificate of Registration, Authority to Print, or TIN card",
+          "Certificate of exemption for scholarship and job or livelihood programs",
+          "Cancellation of Permit to Use a point-of-sale machine or cash register machine",
+          "Registration of a computerized accounting system, computerized books of accounts, electronic storage system, middleware, and similar systems",
+          "Registration of a computerized accounting system or computerized books of accounts through ORUS",
+          "Account enrollment with the enhanced Electronic Accreditation and Registration system",
+          "Permit to Use a cash register machine, point-of-sale machine, other sales machines, sales receipting software, or special purpose machine",
+          "Application for a TIN card",
+          "Permit to Use loose-leaf books of accounts, invoices, or other accounting records",
+          "Closure of a head office subject to audit, with issuance of tax clearance, excluding the audit processing time",
+          "Closure of a head office not subject to audit, with issuance of tax clearance",
+          "Closure of a branch with tax liabilities",
+          "Closure of a branch without tax liabilities",
+          "Approved ONETT Computation Sheet for onerous transfer of real property, taxable and exempt",
+          "Approved ONETT Computation Sheet for onerous transfer of shares of stock not traded through a local stock exchange",
+          "Approved ONETT Computation Sheet for donation of real property",
+          "Approved ONETT Computation Sheet for donation of personal property",
+          "Approved ONETT Computation Sheet of tax due on the estate of a decedent",
+          "Electronic Certificate Authorizing Registration for sale, donation, or estate, original issuance",
+          "Delinquency Verification Certificate",
+          "Tax Compliance Verification Certificate",
+          "Delinquency Verification Report"
+        ]
+      },
+      {
+        "heading": "Revenue Regional Office – External Services",
+        "items": [
+          "Certificate of Employment for resigned, transferred, retired, or deceased employees whose records are still in the active file",
+          "Certificate of Employment for resigned, transferred, retired, or deceased employees whose records are in inactive storage",
+          "Survivorship benefits for deceased employees",
+          "Tax clearance for bidding purposes",
+          "Tax clearance certificate for general purpose",
+          "Service record for resigned, transferred, retired, or deceased employees, active file",
+          "Service record for resigned, transferred, retired, or deceased employees, inactive file"
+        ]
+      },
+      {
+        "heading": "National Office – External Services",
+        "items": [
+          "Permit to buy, sell, commingle, or transfer bioethanol fuel",
+          "Permit to import anhydrous ethanol",
+          "Permit to import Jet A-1 fuel",
+          "Disposal of contaminated petroleum products and backloading of off-specs petroleum products",
+          "Conversion of tanks",
+          "Authority to Release Imported Goods on excisable products",
+          "Permit to dismantle, install, or amend a manufacturing plant",
+          "Permit to operate as buyer or user of denatured alcohol to manufacture excisable products",
+          "Permit to operate as a distillery and producer of bio-ethanol, within and outside Metro Manila",
+          "Permit to operate as importer or manufacturer of alcohol products, non-essential beverages, and sweetened beverages, within and outside Metro Manila",
+          "Permit to operate as storage of alcohol or depot, within and outside Metro Manila",
+          "Registration of product brands",
+          "Internal revenue strip stamps and labels for alcohol products",
+          "Permit to operate as manufacturer or importer of tobacco products or mineral products, within and outside Metro Manila",
+          "Permit to import raw materials and mechanical contrivances for tobacco manufacturers",
+          "Permit to register cigarette products",
+          "Tax clearance or Certificate Authorizing Registration for stock transactions not traded through the local stock exchange, Large Taxpayers National Office",
+          "Electronic Certificate Authorizing Registration and ONETT Computation Sheet for sale, transfer, or donation of shares or properties, for Large Taxpayers National Office and Large Taxpayers Divisions Cebu and Davao",
+          "Certification of payment",
+          "Certified true copy of documents filed by large taxpayers",
+          "Tax exemption on separation benefits of employees of large taxpayers",
+          "Certificate of no similar claim for refund",
+          "Destruction of expired, obsolete, or damaged inventory of goods",
+          "Delinquency Verification Certificate for VAT refund or VAT credit claims, including Large Taxpayers Divisions Cebu and Davao",
+          "Tax clearance for bidding purposes and general-purpose tax clearance for large taxpayers",
+          "Tax debit memo",
+          "Permit to operate as importer, dealer, trader, or manufacturer of petroleum or automobile products, within and outside Metro Manila",
+          "Renewal of permit to operate",
+          "Permit to operate a storage facility, additional storage tanks, or to blend biofuel-blended diesel or gasoline",
+          "Analysis of BIR accountable forms",
+          "Approval of formulas for denatured alcohol",
+          "Sampling and analysis of alcohol and denaturants during denaturing",
+          "Permit to export excisable articles",
+          "Product Replenishment Debit Memo",
+          "Official Delivery Invoice for molasses",
+          "GUIA",
+          "Excise Taxpayer Removal Declaration",
+          "Withdrawal Certificate",
+          "Denaturing of alcohol, anhydrous bioethanol, and petroleum products in bulk",
+          "Certification of taxpayers under the Large Taxpayers Service",
+          "Certified true copies of official register books, including bulk requests",
+          "Large Taxpayers Service data or information",
+          "Ruling on local purchase of a motor vehicle",
+          "VAT Certificate and VAT Identification Card",
+          "Tax treaty relief applications and requests for confirmation, evaluation only",
+          "Tax Residency Certificate",
+          "Tax sparing, evaluation only",
+          "Survivorship benefits and Certificate of Employment for resigned, transferred, retired, or deceased employees",
+          "Filing of confidential information",
+          "Certificate of tax delinquency",
+          "Tax credit certificate or cash refund under Revenue Administrative Order No. 1-2019",
+          "Requisitions for internal revenue labels for private importers and manufacturers",
+          "Tax clearance for bidding by a non-resident foreign corporation or a non-resident alien not engaged in trade or business",
+          "Delinquency Verification Certificate for the Commission on Appointments, Civil Service Award, or NBI, and for VAT refund",
+          "Tax clearance certificate for government-owned or controlled corporations",
+          "Accreditation of additional bank branches",
+          "Validation of successfully uploaded over-the-counter and electronic transactions of authorized agent banks for Bureau of the Treasury transaction fees",
+          "NGO application for certification as a PCNC-accredited donee institution",
+          "Requests for ruling, legal opinion, and VAT refund claims of RDO, Large Taxpayers Service, and VAT Credit Audit Division",
+          "Service record for resigned, transferred, retired, or deceased employees",
+          "Subpoenas, memoranda, and request letters from other government agencies",
+          "Lending of books and issuances to researchers who are not BIR employees",
+          "Certification or certified photocopy of documents and revenue issuances, walk-in, and online copy of revenue issuances",
+          "Tax clearance for bidding purposes for Large Taxpayers Divisions Cebu and Davao",
+          "Withdrawal, discontinuance, or transfer of applications",
+          "Queries raised by phone, chat, or email with the Customer Assistance Division",
+          "Purchase order for issuance of community tax certificates to local government units"
+        ]
+      },
+      {
+        "heading": "Internal services and other contents",
+        "items": [
+          "Revenue Regional Office internal service: local learning and development programs",
+          "National Office internal services include administrative compliance for tax clearance and permits, audit-document requests, product identification and tax classification, payment-record corrections, double filing and double payment cancellation, transfer of payment, requisition of BIR forms, validation of tax credit certificates, RELIEF data, outstanding tax liability certificates, contract review, legal opinions, drafting of revenue issuances, case-status certifications, system access, cleared accountabilities, certificates of employment and service records for active employees, trainings and scholarships, allotment certification, and messengerial or mailing requests",
+          "Feedback and complaints mechanism",
+          "Directory of revenue regional and district offices"
+        ]
+      }
+    ]
+  },
+  "02_ORUS_User_Guide_2024.pdf": {
+    "title": "ORUS Taxpayer Guide: Application for TIN Issuance under Executive Order No. 98",
+    "documentType": "Taxpayer guide",
+    "reference": "ORUS Application for TIN Issuance of E.O. 98 Taxpayer Guide",
+    "issued": "2024",
+    "searchable": true,
+    "summary": "Step-by-step ORUS guide for a Filipino citizen who does not yet have a TIN and needs one under Executive Order No. 98. It covers account creation, who must secure this TIN, account verification within 24 hours, and the BIR Form 1904 application through login. It is not a guide for business registration, books of accounts, or updating an existing business.",
+    "topics": [
+      "ORUS",
+      "Executive Order No. 98",
+      "TIN issuance without an existing TIN",
+      "account creation and verification",
+      "BIR Form 1904",
+      "one-time taxpayer"
+    ],
+    "sections": [
+      {
+        "heading": "Who must secure a TIN under E.O. 98",
+        "items": [
+          "Dealings with banks",
+          "Dealings with government agencies",
+          "First-time job seeker",
+          "A person with no existing TIN or BIR record creates an ORUS account with one permanent or company email",
+          "A person who already has a TIN must use the permanent email already in the BIR registration record"
+        ]
+      },
+      {
+        "heading": "Account creation",
+        "items": [
+          "Open https://orus.bir.gov.ph from www.bir.gov.ph or directly",
+          "Choose New Registration, user type As an Individual, then Create an Account",
+          "Agree to the Terms of Service and register as Taxpayer",
+          "Choose Without Existing TIN and agree to the pop-up",
+          "User Type – Transaction: Get TIN for Filipino Citizen – E.O. 98 / One-Time Taxpayer",
+          "Taxpayer Type: Executive Order No. 98 – Filipino Citizen (EO98FC)",
+          "Required account fields include email, password, confirm password, and reCAPTCHA",
+          "Password must be 12 to 128 characters, must not match previous passwords or contain the username or full name, and must include an uppercase letter, a lowercase letter, a number, and a special character",
+          "The email becomes the ORUS username, the permanent taxpayer email, and the address that receives the TIN after approval. Changing it is not available online"
+        ]
+      },
+      {
+        "heading": "Account verification",
+        "items": [
+          "After Register, verify the account from the email link within 24 hours",
+          "The verification link is on https://orus.bir.gov.ph",
+          "If the user did not start the transaction, do not click the link and report it to contact_us@bir.gov.ph",
+          "Concerns: telephone 8538-3200"
+        ]
+      },
+      {
+        "heading": "Application for TIN issuance",
+        "items": [
+          "Log in and choose New Registration, As an Individual, then Fill-up Registration Form (1904)",
+          "Complete Taxpayer Information and Residence Address",
+          "Purpose of TIN Application applies only to One-Time Transactions – Filipino Citizen (ONETFC); otherwise continue",
+          "Authorized Representative: No, or Yes with the required fields",
+          "Spouse Information is required only for married individuals",
+          "Upload attachments as JPEG, PNG, or PDF, each file not exceeding 25 MB",
+          "Review the summary, accept the caveats, and submit. The pop-up shows the Application Reference Number, date, and the Revenue District Office that will process it",
+          "Email is sent on submission and on approval. After approval, the TIN appears on the Profile tab with registered name, branch code, and RDO code",
+          "If denied, complete the findings in Reason or Comment for Denial and resubmit"
+        ]
+      }
+    ]
+  },
+  "03_Books_of_Accounts_ORUS_RMC_04_2026.pdf": {
+    "title": "Clarification on Mandatory ORUS Registration of Permanently Bound Loose-Leaf and Computerized Books of Accounts (RMC No. 4-2026)",
+    "documentType": "Revenue Memorandum Circular",
+    "reference": "Revenue Memorandum Circular No. 004-2026",
+    "issued": "January 15, 2026",
+    "searchable": false,
+    "summary": "Clarifies that permanently bound loose-leaf books of accounts and computerized books of accounts must be registered through ORUS, and extends the deadlines because of ORUS log-in problems. This circular has no extractable text in the search index, so answer from this catalog entry.",
+    "topics": [
+      "RMC No. 4-2026",
+      "ORUS registration of books of accounts",
+      "permanently bound loose-leaf books",
+      "computerized books of accounts",
+      "QR code stamp",
+      "extended registration deadlines"
+    ],
+    "sections": [
+      {
+        "heading": "Mandatory registration through ORUS",
+        "items": [
+          "Issued to reiterate Revenue Memorandum Circular No. 3-2023",
+          "Permanently bound loose-leaf books of accounts and computerized books of accounts must be registered online through ORUS within the prescribed deadlines, unless the Commissioner or an authorized representative grants an extension requested before the original deadline lapses",
+          "Successful ORUS registration generates a QR code stamp that can be validated online",
+          "Affix the QR code to the first page of permanently bound loose-leaf books",
+          "Print the QR code and keep it for computerized books of accounts"
+        ]
+      },
+      {
+        "heading": "Manual registration only in exceptional cases",
+        "items": [
+          "Manual stamping at the RDO of the head office or branch where the TIN or branch TIN is registered is allowed only for system downtime or technical errors that prevent ORUS registration",
+          "Accept manual registration only with an official advisory that ORUS is unavailable, or a screenshot of the error message"
+        ]
+      },
+      {
+        "heading": "Records not covered",
+        "items": [
+          "Loose-leaf invoices, receipts, and other accounting records stay on manual registration at the concerned RDO because those transactions are not yet available in ORUS"
+        ]
+      },
+      {
+        "heading": "Extended deadlines",
+        "items": [
+          "Permanently bound loose-leaf books of accounts, invoices, and other accounting records: original deadline January 15, 2026, extended to January 31, 2026",
+          "Computerized books of accounts and other accounting records: original deadline January 30, 2026, extended to February 17, 2026",
+          "The extension is due to intermittent ORUS log-in connectivity issues",
+          "Taxpayers must comply within the extended deadlines to avoid penalties",
+          "Signed by Charlito Martin R. Mendoza, Commissioner of Internal Revenue"
+        ]
+      }
+    ]
+  },
+  "04_Invoicing_RMC_77_2024.pdf": {
+    "title": "Clarification on Invoicing Requirements under RR No. 7-2024, as amended by RR No. 11-2024 (RMC No. 77-2024)",
+    "documentType": "Revenue Memorandum Circular",
+    "reference": "Revenue Memorandum Circular No. 077-2024",
+    "issued": "July 11, 2024",
+    "searchable": false,
+    "summary": "Question-and-answer circular on the Ease of Paying Taxes Act invoicing rules. An invoice is the primary evidence for sales of goods and of services. Official receipts become supplementary documents. This circular has no extractable text in the search index, so answer from this catalog entry.",
+    "topics": [
+      "RMC No. 77-2024",
+      "RR No. 7-2024",
+      "Ease of Paying Taxes Act",
+      "VAT invoice",
+      "non-VAT invoice",
+      "P500 invoice threshold",
+      "official receipt conversion",
+      "Authority to Print"
+    ],
+    "sections": [
+      {
+        "heading": "Who must issue an invoice",
+        "items": [
+          "A VAT-registered person issues a VAT invoice for every sale, barter, exchange, or lease of goods or properties and for every sale, barter, or exchange of services, regardless of amount",
+          "A non-VAT person issues a non-VAT invoice for every sale of goods or properties and for every service valued at P500 or more. If the buyer asks for an invoice, issue it regardless of amount",
+          "A non-VAT seller also issues an invoice when a single transaction is more than P500, when the buyer requests one, or when transactions below P500 aggregate to at least P500 at the end of the day",
+          "The P500 threshold is adjusted every three years from January 22, 2024 using the Consumer Price Index",
+          "Invoicing provisions of RR No. 7-2024 took effect on April 27, 2024, fifteen days after publication on the BIR website on April 12, 2024"
+        ]
+      },
+      {
+        "heading": "Invoice contents and names",
+        "items": [
+          "A VAT or non-VAT invoice contains the information in Section 6(B) of RR No. 7-2024",
+          "Business style of the buyer or seller is not required. A trade name, store name, or branding may be shown",
+          "The word Invoice must be printed prominently. Allowed descriptive names include Invoice, Sales Invoice, Cash Invoice, Charge Invoice, Credit Invoice, Service Invoice, and Billing Invoice",
+          "Cash Invoice is for cash or immediately paid sales. Charge or Credit Invoice is for sales on credit. Service Invoice is for services. Billing Invoice bills charges for a specific transaction. Commercial Invoice is for export. Miscellaneous Invoice is for other income",
+          "From April 27, 2024, sellers of goods and services issue an invoice. A seller may use more than one type, such as cash and charge, or goods and services",
+          "A seller cannot issue a second invoice merely to acknowledge collection. A supplementary official receipt, payment receipt, or acknowledgement receipt may be issued when payment is collected",
+          "An invoice may itself show that payment was already received",
+          "Utility and other recurring billers issue a Billing Invoice when billing, with quantity, unit cost, and description or nature of service under Section 237 of the Tax Code",
+          "A VAT-registered seller with mixed transactions may use one invoice or separate invoices. One invoice must break down VATable, VAT-exempt, and zero-rated sales and the VAT for each. Separate invoices must prominently state VAT-Exempt Sale or Zero-Rated Sale"
+        ]
+      },
+      {
+        "heading": "Authority to Print and official receipts",
+        "items": [
+          "A new Authority to Print is required because the invoice is now the primary evidence. During the transitory period, unused official receipts may be converted",
+          "Unused official receipts may continue as supplementary documents only if every page is stamped THIS DOCUMENT IS NOT VALID FOR CLAIM OF INPUT TAX",
+          "Unused official receipts may be converted to invoices until fully consumed by striking out Official Receipt and stamping Invoice or a descriptive invoice name. Missing information required by Section 237, including quantity, unit cost, and description, may be stamped on conversion",
+          "Each invoice type may have its own serial range starting at 1, or a prefix or suffix. Official receipts kept as supplementary documents continue from the last approved official-receipt serial",
+          "CRM, POS, e-receipting, and e-invoicing systems may rename Official Receipt to a descriptive invoice term without RDO approval of the renaming. The new serial continues from the last official receipt. Submit a notice in duplicate to the RDO or Large Taxpayers office where the machines are registered, showing the starting serial and start date",
+          "Stamping Invoice on unused official receipts does not need prior RDO approval, but reporting the conversion is required. Obtain a new ATP before the converted receipts are used up",
+          "Inventory report of unused manual and loose-leaf official receipts converted to invoices, Annex C, was due until July 31, 2024",
+          "Notice of renaming for CRM, POS, CAS, or CBA, Annex D, was due within 30 days from completion of reconfiguration or on December 31, 2024, whichever came first",
+          "A taxpayer who already submitted the inventory under Annex D of RMO No. 12-2013, or a letter notice before this circular was posted, need not resubmit",
+          "Reports for all branches may be filed with the head-office RDO, which transmits copies to the branch RDOs, or through the TRRA Portal",
+          "CAS or CBA enhancements were to be done on or before December 31, 2024, with any extension approved by the Regional Director or the Assistant Commissioner of the Large Taxpayers Service for not more than six months from December 31, 2024. A letter request for extension was due before December 31, 2024. The RDO acts within three working days and the Regional Director or Assistant Commissioner acts within three working days of that recommendation"
+        ]
+      },
+      {
+        "heading": "Consequences and special cases",
+        "items": [
+          "Issuing an official receipt, stamped or unstamped, from CRM, POS, e-receipting, or e-invoicing after December 31, 2024 or completion of reconfiguration, whichever is first, and issuing an unstamped manual or loose-leaf official receipt after April 27, 2024, is treated as failure to issue an invoice under Section 6(A) of RR No. 7-2024",
+          "The penalty is not less than P1,000 and not more than P50,000, and imprisonment of not less than two years but not more than four years, under Section 264(a) of the Tax Code",
+          "Issuing only an official receipt, payment receipt, collection receipt, billing statement, or statement of account, without the corresponding invoice, has the same consequence",
+          "A non-VAT seller who issues a VAT invoice is liable for the VAT under Section 106 or 108 without the benefit of input tax credit, plus a 50 percent surcharge under Section 248(B). The VAT-registered buyer may claim input tax under Section 110 if the invoice shows the amount of sales, VAT amount, registered name and TIN from the COR of both parties, description of goods or services, and date",
+          "A VAT-registered seller who issues an invoice missing information required by Sections 3(B) and 6(B) of RR No. 7-2024 is liable for non-compliance. The buyer may still claim input tax unless the invoice lacks amount of sales, VAT amount, registered name and TIN, description, or date",
+          "For a sale of service before April 27, 2024 collected from January 22, 2024 through April 26, 2024, the collection document is an official receipt. If collected on or after April 27, 2024, the sale document is an invoice or a converted official receipt, and the collection document is a payment, collection, or acknowledgement receipt",
+          "For a sale of service on or after April 27, 2024, issue an invoice or an allowed converted official receipt. After April 27, 2024, collection is evidenced by a payment receipt, official receipt, collection receipt, or acknowledgement receipt",
+          "A non-stock, non-profit educational, charitable, religious, cultural, social welfare, or philanthropic entity, or an NGO, issues a supplementary document such as a non-VAT official receipt, acknowledgement receipt, or donation receipt for donations. If it has any profitable business activity, it issues an invoice for every business sale of goods or services",
+          "Sample manual invoice layouts are attached as annexes. Signed by Romeo D. Lumagui, Jr., Commissioner of Internal Revenue. Effectivity is upon posting on the BIR website"
+        ]
+      }
+    ]
+  },
+  "05_Online_Sellers_Taxpayer_Guide.pdf": {
+    "title": "Taxpayer's Guide for Online Sellers: Steps and Requirements for Registration, Filing, and Payment",
+    "documentType": "Taxpayer guide",
+    "reference": "Taxpayer's Guide for Online Sellers",
+    "issued": "Prepared by the Public Information and Education Division under the Client Support Service",
+    "searchable": true,
+    "summary": "Guide for online sellers earning income in the Philippines through an electronic platform or their own website, except non-resident foreign companies. It covers five registration channels, post-registration duties, income tax rates, filing deadlines, withholding reports, and BIR eServices.",
+    "topics": [
+      "online sellers",
+      "business registration",
+      "BIR Form 1901",
+      "BIR Form 1903",
+      "Documentary Stamp Tax",
+      "filing deadlines",
+      "8 percent income tax",
+      "withholding tax remittance",
+      "BIR eServices"
+    ],
+    "sections": [
+      {
+        "heading": "Ways to register",
+        "items": [
+          "Manual registration at the New Business Registration Counter of the RDO of the place of business, or of the residence if the business is at home, under the Single Window Policy",
+          "ORUS at https://orus.bir.gov.ph for end-to-end registration and updates",
+          "NewBizReg Portal at https://www.bir.gov.ph/newbizreg/ for a new head office or branch, with scanned documents emailed to the RDO and attachments not exceeding 4 MB per email",
+          "TRRA Portal at https://www.bir.gov.ph/trraportal/ for other registration transactions, each PDF not exceeding 4 MB",
+          "Philippine Business Hub at https://business.gov.ph/home, which connects SEC, DTI, BIR, SSS, PhilHealth, Pag-IBIG, and selected Metro Manila LGUs",
+          "Register on or before commencement of business, payment of any tax due, or filing of a return, whichever comes first"
+        ]
+      },
+      {
+        "heading": "Manual registration documents and fees",
+        "items": [
+          "Individuals: BIR Form 1901, a government-issued ID showing name, address, and birth date, or other proof of address, and either a final sample of own invoices with BIR Form 1906 or BIR Printed Invoices bought at the NBRC",
+          "Additional for individuals if applicable: DTI certificate for a business name, and an SPA plus IDs if a representative transacts",
+          "Corporations: BIR Form 1903, SEC Certificate of Incorporation, Certificate of Recording for a partnership, or License to Do Business for a foreign corporation, Articles of Incorporation, and invoice sample with BIR Form 1906 or BIR Printed Invoices",
+          "Additional for corporations transacting through a representative: board resolution or secretary's certificate, and government IDs",
+          "Pay P30 Documentary Stamp Tax and, if chosen, the cost of BIR Printed Invoices. An Authority to Print is filed at the NBRC when printing own invoices",
+          "Receive the Certificate of Registration, received copy of BIR Form 1901 or 1903, Notice to Issue Invoice, BIR Printed Invoices or Authority to Print, and proof of payment",
+          "Newly registered taxpayers are encouraged to attend the RDO taxpayer briefing. Other documents are in the Citizen's Charter"
+        ]
+      },
+      {
+        "heading": "ORUS, NewBizReg, TRRA, and Philippine Business Hub",
+        "items": [
+          "ORUS: create an account, choose new registration, accomplish BIR Form 1901 or 1903, attach the same ID, invoice, SEC, and SPA documents, pay the P30 loose DST online through Link.BizPortal using LANDBANK, BPI, Asia United Bank, PSBank, RCBC, Robinsons Bank, or UnionBank, then print the electronic COR and ATP if applicable",
+          "NewBizReg: an applicant with a TIN may pay the P30 DST online. An applicant without a TIN waits for an email and pays the DST at the NBRC when claiming the COR. Attach the tax type questionnaire from the NewBizReg site",
+          "TRRA transactions: TIN under E.O. 98 and ONETT, registration of OFW and non-resident citizens, Authority to Print, email update using Form S1905, transfer of employees and other non-business taxpayers, and updating a maiden name for a married woman",
+          "Philippine Business Hub: create a profile, register the business name in BNRS, answer the BIR tax type questionnaire, pay P30 DST online or manually, generate or claim the COR, then apply for an ATP or buy BIR Printed Invoices. Manual payment needs the PBH Unified Application Form, tax type questionnaire, and invoice sample or BIR Printed Invoices"
+        ]
+      },
+      {
+        "heading": "After registration",
+        "items": [
+          "Post the Certificate of Registration and Notice to Issue Invoices where they are visible in the establishment",
+          "Register books of accounts before the deadline of the first quarterly income tax return or the annual income tax return, whichever is earlier. New sets may be registered yearly before the old pages are used up",
+          "Annual sales, earnings, and receipts exceeding P3,000,000 must be audited yearly by an independent CPA",
+          "Preserve books and other accounting records for five years from the day after the filing deadline, or from the actual filing date if filed late, counted from the taxable year of the last entry",
+          "Issue a registered sales or commercial invoice for every sale or transfer of merchandise or service of P500 or more. If each sale is below P500 but the day's total is at least P500, issue one invoice for the day's aggregate. VAT-registered persons issue an invoice regardless of amount"
+        ]
+      },
+      {
+        "heading": "Tax rates",
+        "items": [
+          "Domestic corporation and resident foreign corporation: 25 percent of taxable income, or 20 percent if net taxable income does not exceed P5,000,000 and total assets excluding the land of the office, plant, and equipment do not exceed P100,000,000",
+          "Minimum corporate income tax: 2 percent of gross income, or 1 percent from July 1, 2020 to June 30, 2023, reverting to 2 percent on July 1, 2023",
+          "Non-resident foreign corporation: 25 percent of taxable income from Philippine sources",
+          "Graduated individual income tax: 0 up to P250,000; 15 percent of the excess over P250,000 up to P400,000; P22,500 plus 20 percent of the excess over P400,000 up to P800,000; P102,500 plus 25 percent of the excess over P800,000 up to P2,000,000; P402,500 plus 30 percent of the excess over P2,000,000 up to P8,000,000; P2,202,500 plus 35 percent of the excess over P8,000,000",
+          "The 8 percent income tax option is for self-employed individuals whose gross sales and other non-operating income do not exceed the P3,000,000 VAT threshold, and for mixed-income earners on their business income only. Compensation income stays on graduated rates. Exceeding the threshold ends the option",
+          "First year: signify the 8 percent option on BIR Form 1901 or on the initial quarterly return, BIR Form 2551Q or 1701Q. Later years: BIR Form 1905 at the start of the year, or the first quarterly percentage tax or income tax return"
+        ]
+      },
+      {
+        "heading": "Filing deadlines for self-employed individuals",
+        "items": [
+          "Income tax BIR Form 1701Q: May 15, August 15, and November 15. Annual BIR Form 1701 or 1701A: April 15",
+          "VAT BIR Form 2550Q: April 25, July 25, October 25, and January 25 of the following year",
+          "Percentage tax BIR Form 2551Q: the same quarterly dates as VAT",
+          "VAT applies when gross sales exceed P3,000,000 or the person opts to register as a VAT taxpayer. Percentage tax applies to a VAT-covered activity whose gross sales do not exceed P3,000,000 and who is not VAT-registered"
+        ]
+      },
+      {
+        "heading": "Filing deadlines for corporations, partnerships, and other non-individuals",
+        "items": [
+          "Quarterly income tax BIR Form 1702Q: within 60 days after the close of each taxable quarter, calendar or fiscal",
+          "Annual income tax BIR Form 1702-RT, 1702-EX, or 1702-MX: the 15th day of the fourth month after the close of the taxable year",
+          "VAT BIR Form 2550Q and percentage tax BIR Form 2551Q: the 25th day after the close of each taxable quarter"
+        ]
+      },
+      {
+        "heading": "How to file and what else to submit",
+        "items": [
+          "Manual filing of hard copies at an authorized agent bank or revenue collection officer",
+          "eBIRForms offline package",
+          "eFPS for electronic filing and online payment",
+          "eAFS for online submission of the filed income tax return, audited financial statements, and other attachments in PDF",
+          "Under the Ease of Paying Taxes Act, Republic Act No. 11976, returns are filed electronically and tax may be paid electronically or manually at any authorized agent bank, RDO through a revenue collection officer, payment gateway, or authorized tax software provider",
+          "ePayment channels are listed at the BIR ePay page",
+          "BIR Form 0619-E and 0619-F: on or before the 10th day of the following month for the first two months of the quarter. eFPS users follow RR No. 26-2002",
+          "BIR Form 1601-C: on or before the 10th day of the following month for January to November, and on or before January 15 for December",
+          "BIR Forms 1601-EQ, 1601-FQ, and 1603Q: not later than the last day of the month after the quarter",
+          "SAWT through eSubmission when claiming creditable withholding tax on BIR Forms 1701, 1701A, 1701Q, 2550Q, and 2551Q",
+          "SLSP through eSubmission as an attachment to BIR Form 2550Q under RMO No. 4-2003",
+          "QAP as an attachment to BIR Form 1601-EQ",
+          "BIR Form 1604-E and the annual alphalist of payees: on or before March 1 of the following year",
+          "BIR Forms 1604-C and 1604-F: on or before January 31 of the following year"
+        ]
+      },
+      {
+        "heading": "eServices named in the guide",
+        "items": [
+          "ORUS: https://bit.ly/BIR-ORUS",
+          "TRRA Portal: https://www.bir.gov.ph/trraportal/",
+          "NewBizReg: https://www.bir.gov.ph/newbizreg/",
+          "eFPS: https://bit.ly/BIR-eFPS",
+          "eBIRForms offline package",
+          "ePay: https://bit.ly/BIR-ePay",
+          "eAFS: https://bit.ly/BIR-eAFS",
+          "eAppointment: https://bit.ly/BIREAPPOINTMENT",
+          "Revie chatbot on www.bir.gov.ph for TIN validation, RDO finder, eComplaint, general inquiries, and TIN inquiry",
+          "Contact: www.bir.gov.ph and (02) 8538-3200"
+        ]
+      }
+    ]
+  },
+  "06_eBIRForms_Job_Aid.pdf": {
+    "title": "Job Aids for Taxpayers and Accredited Tax Agents for the Use of the eBIRForms",
+    "documentType": "Job aid",
+    "reference": "Guide for eBIRForms",
+    "issued": "January 2013 edition; contact center (02) 981-8888",
+    "searchable": true,
+    "summary": "January 2013 job aid for the offline eBIRForms package and the online eBIRForms system. It explains the project, installation, offline preparation, printing and signing, online enrollment, and online filing. Procedures and screen labels are those of this edition, not a later package.",
+    "topics": [
+      "eBIRForms offline package",
+      "online eBIRForms enrollment and filing",
+      "accredited tax agents",
+      "tax software providers",
+      "download and install",
+      "print and sign a return"
+    ],
+    "sections": [
+      {
+        "heading": "Project overview",
+        "items": [
+          "The interactive-forms project supports electronic filing, wider channels than eFPS, data capture, and filing by people with limited internet",
+          "Phase 1: downloadable PDF of BIR Forms 1700, 1701, and 1702 that can be filled, saved, printed, and submitted manually",
+          "Phase 2: offline package of 31 BIR forms with entry, editing, saving, and printing, still submitted manually",
+          "Phase 3: online system that accepts, validates, processes, and stores returns and sends data to ITS and RPS. It serves non-eFPS taxpayers, accredited tax agents filing for clients, and tax software providers certifying their software"
+        ]
+      },
+      {
+        "heading": "Terms and features",
+        "items": [
+          "Offline means not connected to the internet. Online means connected",
+          "Manual filing: fill offline, print, and submit to an authorized agent bank, RDO, or revenue collection officer",
+          "Electronic filing in this job aid: fill the offline package or the downloadable Excel or PDF forms 1700, 1701, and 1702",
+          "Manual payment is handed to an authorized agent bank or revenue collection officer. Electronic payment uses an enrolled payment system",
+          "The offline package validates required fields, single options, MMDDYYYY dates, allowed values, and data length, and it computes fields automatically",
+          "The forms in the package are the existing BIR forms in electronic format, not new forms"
+        ]
+      },
+      {
+        "heading": "How the job aid is organized",
+        "items": [
+          "Introduction to eBIRForms",
+          "Download and install the offline package",
+          "Update the offline version",
+          "Navigate a form and the types of input",
+          "Use the package offline",
+          "Print and sign the form",
+          "Enroll in the online eBIRForms system",
+          "File through the online system",
+          "Frequently asked questions"
+        ]
+      },
+      {
+        "heading": "Form numbers mentioned in this edition",
+        "items": [
+          "0605, 1600, 1600WP, 1601C, 1601E, 1601F, 1602, 1603, 1604CF, 1604E, 1606",
+          "1700, 1701, 1701Q, 1702, 1702Q, 1704, 1706, 1707",
+          "1800, 1801, 2000, 2000-OT",
+          "2200, 2200A, 2200AN, 2200M, 2200P, 2200T",
+          "2550M, 2550Q, 2551M, 2551Q, 2552, 2553"
+        ]
+      }
+    ]
+  },
+  "07_COR_eCOR_Registration_Seal_RMC_38_2026.pdf": {
+    "title": "Issuance and Posting of the BIR Registration Seal Badge and QR Code on the Certificate of Registration (RMC No. 38-2026)",
+    "documentType": "Revenue Memorandum Circular",
+    "reference": "Revenue Memorandum Circular No. 038-2026",
+    "issued": "April 29, 2026",
+    "searchable": false,
+    "summary": "Requires online sellers and persons offering services online to post the BIR Registration Seal Badge instead of the full COR or eCOR, and announces the QR code on the COR and eCOR. This circular has no extractable text in the search index, so answer from this catalog entry.",
+    "topics": [
+      "RMC No. 38-2026",
+      "BIR Registration Seal Badge",
+      "Certificate of Registration",
+      "electronic Certificate of Registration",
+      "QR code verification",
+      "online sellers and content creators"
+    ],
+    "sections": [
+      {
+        "heading": "Legal basis and who is covered",
+        "items": [
+          "Based on Section 236 of the Tax Code, Section 5 of RR No. 7-2024, and Section 5 of RR No. 15-2024",
+          "Persons subject to internal revenue tax must register with the RDO on or before commencement of business, before payment of any tax due, or before or upon filing a return, whichever the Tax Code requires",
+          "Section 5(F) of RR No. 7-2024 requires issuance of a COR or eCOR for each head office, branch, and facility after complete documentary requirements, within the Citizen's Charter period",
+          "Persons engaged in business or practice of profession must post the COR or eCOR where the business is conducted and at each branch or facility, clearly visible to the public",
+          "Section 5(H) of RR No. 7-2024 and Section 7 of RR No. 15-2024 require proof of registration on websites, e-commerce or e-marketplace seller pages, and other platforms",
+          "Coverage includes online sellers of goods and persons providing services digitally, including professionals, bloggers, vloggers, live streamers, content creators, influencers, and individuals earning from views, advertisements, affiliate commissions, brand sponsorships, or similar monetized digital activities"
+        ]
+      },
+      {
+        "heading": "Registration Seal Badge",
+        "items": [
+          "The BIR issues the badge in Annex A so the seller, content creator, or influencer can post it instead of the full COR or eCOR",
+          "It is issued with the COR or eCOR, free of charge, manually or electronically through ORUS, to all business taxpayers",
+          "Online sellers and online service providers must have the applicable PSIC or PSOC on the COR or eCOR",
+          "Individual professional: PSOC 5990, Online Content Creator",
+          "Individual and non-individual: PSIC 47913 retail sale via internet; PSIC 47911 retail sale via mail order; PSIC 47912 retail sale via telephone order; PSIC 85593 online tutorial services",
+          "Both the COR or eCOR and the badge contain a QR code. Scan it with a mobile application or QR scanner. Relying parties must confirm that the URL is the official BIR verification domain or the BIR link https://verify.bir.gov.ph/correspondence/ before relying on the result",
+          "An existing COR or eCOR without a QR code does not have to be replaced, but taxpayers are encouraged to update it. Someone required to post proof online secures the badge by updating registration at the RDO or through ORUS and paying the P30 loose Documentary Stamp Tax"
+        ]
+      },
+      {
+        "heading": "Where and how to post it",
+        "items": [
+          "Taxpayer's own website or mobile application: any page or link such as About, Company, Government Compliance, or Business Permits",
+          "E-commerce platform or mobile app: Support, About, App Setting, or a link such as Government Compliance or Business Permits",
+          "Seller, merchant, or service provider with an account or sales on a platform: the seller or merchant page, profile, store or shop details, marketplace, or business page",
+          "Post only the badge, not the entire registration document. Cropping or extracting the badge is allowed. Annex B shows the display",
+          "The uploaded badge must stay clear, readable, and unaltered",
+          "The COR or eCOR with QR code and the badge become available when the circular is published on www.bir.gov.ph. Annex C is the taxpayer guide for generating and securing the badge through ORUS",
+          "Signed by Charlito Martin R. Mendoza, Commissioner of Internal Revenue"
+        ]
+      }
+    ]
+  },
+  "08_Taxpayer_Portal_RMC_53_2026.pdf": {
+    "title": "Availability and Pilot Implementation of the Taxpayer Portal (RMC No. 53-2026)",
+    "documentType": "Revenue Memorandum Circular",
+    "reference": "Revenue Memorandum Circular No. 53-2026",
+    "issued": "May 26, 2026",
+    "searchable": true,
+    "summary": "Announces the Taxpayer Portal and limits the pilot to taxpayers registered under the Large Taxpayers Service. It is a secured single view of registration, filed returns, payments, the account ledger, and filing or payment reminders.",
+    "topics": [
+      "RMC No. 53-2026",
+      "Taxpayer Portal",
+      "Large Taxpayers Service",
+      "registration information",
+      "filed returns",
+      "tax payments",
+      "account ledger"
+    ],
+    "sections": [
+      {
+        "heading": "Pilot coverage and functions",
+        "items": [
+          "Pilot is only for taxpayers registered under the offices or divisions of the Large Taxpayers Service",
+          "View current registration details",
+          "Monitor the status of filed returns by tax type and form type",
+          "Track tax payments",
+          "View the account ledger by tax type and form type",
+          "Receive system-generated notifications and reminders for filing and payment",
+          "The portal is meant to reduce manual follow-up and in-person visits"
+        ]
+      },
+      {
+        "heading": "Where to get help",
+        "items": [
+          "For enrollment, technical concerns, or inaccurate records, coordinate with the Large Taxpayers office or division where the taxpayer is registered"
+        ]
+      }
+    ]
+  },
+  "09_Books_of_Accounts_CDR_2024.pdf": {
+    "title": "BIR Checklist of Documentary Requirements, Revised January 2024",
+    "documentType": "Checklist of documentary requirements",
+    "reference": "CDR revised January 2024, QF11-04.2024.00",
+    "issued": "Revised January 2024",
+    "searchable": true,
+    "summary": "Cover-sheet checklists for registration and registration-related applications. Processing starts only when documents are complete; incomplete applications are returned. Mark submitted documents and mark lacking ones. The file includes books of accounts as one checklist, F1105B, together with the other registration checklists.",
+    "topics": [
+      "checklist of documentary requirements",
+      "BIR Form 1901",
+      "BIR Form 1903",
+      "BIR Form 1905",
+      "books of accounts",
+      "Authority to Print",
+      "transfer of registration",
+      "cancellation of TIN",
+      "business closure"
+    ],
+    "sections": [
+      {
+        "heading": "F1101 — Self-employed individuals",
+        "items": [
+          "Covers sole proprietors, PRC-regulated professionals, and persons not regulated by the PRC such as artists, directors, freelancers, mixed-income earners, job order or service contractors, online sellers, vloggers, bloggers, streamers, influencers, YouTubers, and content creators",
+          "Online: create an ORUS account at https://orus.bir.gov.ph. After paying P30 loose DST, print the electronic COR. Comply with invoicing through BIR Printed Invoices or an Authority to Print",
+          "Manual: BIR Form 1901, two originals; government-issued ID showing name, address, and birth date, or proof of address. PRC professionals submit a valid PRC ID plus an ID or proof of address. Online applications upload a selfie while holding the ID",
+          "Buy BIR Printed Invoices at the New Business Registrant Counter, or submit one original final sample of own invoices and use an accredited printer",
+          "Fee: P30 loose Documentary Stamp Tax on the COR, plus the printing cost of BIR Printed Invoices if chosen. If the DST was paid online, submit a photocopy of the proof",
+          "If applicable: SPA and IDs for a representative, DTI certificate for a business name, 9(g) work visa for a foreign national, service contract for a job order or service contract with an NGA, LGU, GOCC, or GFI, franchise documents for a common carrier, BMBE Certificate of Authority, and proof of registration with BOI, PEZA, BCDA, TIEZA, SBMA, or a similar zone"
+        ]
+      },
+      {
+        "heading": "F11ET — Estate and trust",
+        "items": [
+          "BIR Form 1901, two originals",
+          "Estate with property subject to estate tax or under judicial settlement: photocopy of the decedent's death certificate. The heir, administrator, or executor requests cancellation of the decedent's TIN",
+          "Irrevocable trust: photocopy of the irrevocable trust agreement",
+          "No fee listed",
+          "Representative of a trust: SPA from the trustee or trustor and government IDs. Administrator, executor, or heir: proof of that capacity and a government ID"
+        ]
+      },
+      {
+        "heading": "F1103 — Corporations, partnerships, cooperatives, and associations",
+        "items": [
+          "Covers a domestic corporation, one-person corporation, partnership, resident foreign corporation, cooperative, and association, whether taxable or non-taxable",
+          "Online through ORUS, with electronic COR after P30 loose DST and invoicing compliance",
+          "Manual: BIR Form 1903, two originals",
+          "One photocopy of the SEC Certificate of Incorporation, certificate of recording for a partnership, license to do business for a foreign corporation, CDA certificate, HLURB certificate, or DOLE certificate, as applicable",
+          "One photocopy of the articles of incorporation, partnership, or cooperation, articles of association, or the constitution and by-laws of a labor organization",
+          "BIR Printed Invoices or one original final sample of own invoices"
+        ]
+      },
+      {
+        "heading": "F11PBH — Registration through the Philippine Business Hub",
+        "items": [
+          "Covers self-employed persons, domestic corporations, one-person corporations, partnerships, and foreign corporations",
+          "Manual COR: two originals of the printed PBH Unified Form, one original accomplished tax type questionnaire, and either BIR Printed Invoices or BIR Form 1906 with a final invoice sample from an accredited printer",
+          "DST: two originals of BIR Form 0605 for the P30 loose stamp, plus BIR Printed Invoice cost if chosen",
+          "A taxpayer who already generated the electronic COR after online payment of P30 DST still complies with invoicing through BIR Printed Invoices or an Authority to Print",
+          "A representative needs an SPA for an individual, or a board resolution, written resolution, or secretary's certificate for a non-individual, plus IDs"
+        ]
+      },
+      {
+        "heading": "F11BF — Branch and facility",
+        "items": [
+          "Online: the head office enrolls in ORUS at https://orus.bir.gov.ph and registers the branch or facility. Electronic COR follows payment of P30 loose DST. A branch, but not a facility, must comply with invoicing",
+          "Manual branch: BIR Form 1901 or 1903, two originals, plus BIR Printed Invoices or a final sample of own invoices",
+          "Manual facility: BIR Form 1901 or 1903, two originals",
+          "Fee: P30 loose DST on the COR. BIR Printed Invoice cost applies to a branch only",
+          "A representative needs an SPA or a board or secretary's certificate, plus IDs"
+        ]
+      },
+      {
+        "heading": "F1102 — Employees, registered through the employer",
+        "items": [
+          "The employer creates an ORUS account and enrolls in Employer Service Link at https://orus.bir.gov.ph",
+          "Local employee already hired: BIR Form 1902, two originals, and a government-issued ID. Online filing uploads a selfie while holding the ID",
+          "Foreign national employee: BIR Form 1902 and a photocopy of the passport bio page, including entry or exit stamps if applicable",
+          "IGL or POGO employees also submit a certified true copy of the employment contract or equivalent showing duration, compensation, benefits, and duties",
+          "No fee",
+          "If applicable: marriage contract for a married woman. If the employer secures the TIN manually because the system is unavailable, a letter of authority on company letterhead signed by the president or HR head"
+        ]
+      },
+      {
+        "heading": "F1104 — Purely TIN issuance",
+        "items": [
+          "E.O. 98 and ONETT, local individual or resident alien: BIR Form 1904, two originals, and a government-issued ID. Transfer of property by succession also needs the death certificate or an extrajudicial settlement or affidavit of self-adjudication",
+          "If applicable: marriage contract for a married woman, SPA and IDs for a representative, and a barangay certification for a first-time job seeker",
+          "E.O. 98, nonresident foreign national: BIR Form 1904 and the passport bio page. A representative needs an apostilled SPA"
+        ]
+      },
+      {
+        "heading": "F1106 — Authority to Print invoices",
+        "items": [
+          "New or subsequent ATP for manual bound invoices: BIR Form 1906, two originals; choose an accredited printer; one original final sample of own invoices or supplementary invoices",
+          "Subsequent bound application also needs the last ATP, the printer's certificate of delivery, or presentation of a booklet from the last ATP",
+          "Manual loose-leaf invoices: BIR Form 1906, a photocopy of the Permit to Use loose-leaf invoices, a final sample, and the last ATP for a subsequent application",
+          "No fee listed on this checklist",
+          "A representative needs an SPA or a board resolution, written resolution, or secretary's certificate, plus IDs"
+        ]
+      },
+      {
+        "heading": "F1105B — Registration of books of accounts",
+        "items": [
+          "Online through ORUS at https://orus.bir.gov.ph. Successful registration generates a QR stamp to paste on the first page of the books",
+          "New or subsequent manual books: BIR Form 1905, two originals, and the new set of permanently bound books",
+          "Manual loose-leaf books: BIR Form 1905, photocopy of the Permit to Use, the permanently bound loose-leaf books, and an original affidavit of completeness, accuracy, and the number of loose leaves used",
+          "Computerized books: BIR Form 1905, photocopy of the acknowledgement certificate or Permit to Use for the CAS or CBA if applicable, a transmittal letter, and a labeled DVD, USB, or other storage holding the electronic books in the Standard Audit File, plus an original affidavit of completeness and appropriateness"
+        ]
+      },
+      {
+        "heading": "F1100 — Permit to Use loose-leaf books of accounts or invoices",
+        "items": [
+          "Online through ORUS. The permit may be downloaded and printed",
+          "BIR Form 1900, two originals",
+          "One original sample format and print-out",
+          "One original sworn statement identifying the books, invoices, receipts, and other records, the serial numbers of principal and supplementary invoices or receipts, and a commitment to bind the loose-leaf forms permanently within 15 days after the end of each taxable year or when their use ends",
+          "No fee",
+          "A representative needs an SPA or a board or secretary's certificate, plus IDs"
+        ]
+      },
+      {
+        "heading": "F1105 — Registration information updates and TIN card",
+        "items": [
+          "These updates are free online in ORUS: Digital TIN ID, contact information, contact person, civil status, residence address, transfer of registration record, additional line of business, new business name, new tax types or form types, and the 8 percent income tax option",
+          "Paper TIN card: BIR Form 1905, one original; latest 1x1 photo; government-issued ID. Personal appearance is mandatory. The first paper card is free. Replacement of a lost or damaged card costs P100, and a lost card needs an affidavit of loss. A fake TIN card is confiscated for destruction",
+          "Change of registered business address within the same RDO: BIR Form 1905, two originals, and a photocopy of the mayor's permit, DTI certificate, SEC certificate, or the appointment-of-officers form for a one-person corporation showing the new address"
+        ]
+      },
+      {
+        "heading": "F1105T — Transfer of registration",
+        "items": [
+          "Individuals not engaged in business, meaning E.O. 98, ONETT, or employee: BIR Form 1905, two originals",
+          "Business transfer to another RDO, head office or branch: submit three originals of BIR Form 1905 to the old RDO, all stamped Received. One copy goes to the new RDO with the Transfer Related Docket, one stays with the old RDO, and one stays with the taxpayer",
+          "Also submit to the old RDO three originals of the inventory of unused invoices, for destruction or for approval to use them in the new RDO, and three originals of a notarized Transfer Commitment Form if there are open cases",
+          "Submit to the new RDO two originals of BIR Form 1905. Non-individuals also submit the amended articles showing the new principal address and the certificate of filing of the amended articles"
+        ]
+      },
+      {
+        "heading": "F1105C — Cancellation of TIN or closure",
+        "items": [
+          "Death or identical or multiple TINs: BIR Form 1905, two originals, and a photocopy of the death certificate in case of death",
+          "Closure of a head office or branch, or cancellation because of dissolution, merger, or consolidation: BIR Form 1905; original list of ending inventory of goods, supplies, and capital goods; inventory and the unused invoices, supplementary invoices, and other unused accounting forms; original business notices and permits such as the ATP, NIRI, and CRM or POS accreditation and permit; and the original Certificate of Registration",
+          "No fee",
+          "A representative needs an SPA or a board resolution, written resolution, or secretary's certificate, plus IDs"
+        ]
+      }
+    ]
+  }
+}

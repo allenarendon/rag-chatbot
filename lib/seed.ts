@@ -18,6 +18,7 @@ import { embedMany } from 'ai';
 import { openai } from '@ai-sdk/openai';
 // pdf-parse uses CommonJS; default-import the parser fn
 import pdfParse from 'pdf-parse';
+import { embeddingPrefix, sourceEntry } from './sources';
 
 const DATA_DIR = path.join(process.cwd(), 'data');
 const CHUNK_SIZE = 800;
@@ -60,7 +61,7 @@ function batchChunks(chunks: Chunk[]): Chunk[][] {
   let current: Chunk[] = [];
   let tokens = 0;
   for (const chunk of chunks) {
-    const chunkTokens = estimateTokens(chunk.text);
+    const chunkTokens = estimateTokens(embeddingPrefix(chunk.source) + chunk.text);
     if (current.length > 0 && tokens + chunkTokens > EMBED_TOKEN_BUDGET) {
       batches.push(current);
       current = [];
@@ -116,7 +117,11 @@ async function main() {
   for (const pdfPath of pdfPaths) {
     console.log(`Loading and chunking ${pdfPath}…`);
     const fileChunks = await loadAndChunkPdf(pdfPath);
-    console.log(`  ${path.basename(pdfPath)}: ${fileChunks.length} chunks`);
+    const filename = path.basename(pdfPath);
+    if (!sourceEntry(filename)) {
+      console.warn(`  No catalog entry for ${filename}. Add it to data/sources.json.`);
+    }
+    console.log(`  ${filename}: ${fileChunks.length} chunks`);
     chunks.push(...fileChunks);
   }
   if (chunks.length === 0) {
@@ -133,13 +138,22 @@ async function main() {
     console.log(`Embedding batch ${b + 1}/${batches.length} (${batch.length} chunks)…`);
     const { embeddings } = await embedMany({
       model: openai.embedding('text-embedding-3-small'),
-      values: batch.map((c) => c.text),
+      values: batch.map((c) => `${embeddingPrefix(c.source)}${c.text}`),
     });
-    const records = batch.map((c, i) => ({
-      id: `${c.source}#${c.index}`,
-      vector: embeddings[i],
-      metadata: { text: c.text, page: c.page, source: c.source },
-    }));
+    const records = batch.map((c, i) => {
+      const entry = sourceEntry(c.source);
+      return {
+        id: `${c.source}#${c.index}`,
+        vector: embeddings[i],
+        metadata: {
+          text: c.text,
+          page: c.page,
+          source: c.source,
+          title: entry?.title ?? c.source,
+          topics: entry?.topics.join(', ') ?? '',
+        },
+      };
+    });
     console.log(`Upserting batch ${b + 1}/${batches.length}…`);
     for (let i = 0; i < records.length; i += UPSERT_BATCH) {
       await index.upsert(records.slice(i, i + UPSERT_BATCH));

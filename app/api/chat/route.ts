@@ -10,6 +10,7 @@ import { openai } from '@ai-sdk/openai';
 import { streamText, tool, embed } from 'ai';
 import { Index } from '@upstash/vector';
 import { z } from 'zod';
+import { catalogPrompt, sourceEntry } from '@/lib/sources';
 
 const index = new Index();
 
@@ -26,7 +27,10 @@ export async function POST(req: Request) {
       'Do not answer questions that are not about BIR taxpayer services, and encourage the user to ask a question that is about BIR services. ' +
       'Write answers in Markdown that is easy to scan: short paragraphs, ' +
       'and a bullet or numbered list when you list documents, steps, or requirements. ' +
-      'Put each list item on its own line.',
+      'Put each list item on its own line. ' +
+      'These are the indexed documents. Use them to decide where an answer should come from, then call getInformation:\n' +
+      catalogPrompt() +
+      '\nWhen you answer, name the document title returned by the tool.',
     messages,
     tools: {
       getInformation: tool({
@@ -47,12 +51,18 @@ export async function POST(req: Request) {
             topK: 4,
             includeMetadata: true,
           });
-          return hits.map((h) => ({
-            text: (h.metadata?.text as string) ?? '',
-            page: (h.metadata?.page as number) ?? null,
-            source: (h.metadata?.source as string) ?? null,
-            score: h.score,
-          }));
+          return hits.map((h) => {
+            const filename = (h.metadata?.source as string) ?? '';
+            const entry = filename ? sourceEntry(filename) : undefined;
+            return {
+              text: (h.metadata?.text as string) ?? '',
+              page: (h.metadata?.page as number) ?? null,
+              source: filename || null,
+              title: entry?.title ?? ((h.metadata?.title as string) ?? null),
+              topics: entry?.topics.join(', ') ?? ((h.metadata?.topics as string) ?? null),
+              score: h.score,
+            };
+          });
         },
       }),
     },
